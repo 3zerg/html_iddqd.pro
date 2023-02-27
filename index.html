@@ -55,7 +55,17 @@
                 </defs>
             </svg>
         </div>
-        <nav class="container mx-auto  flex items-center justify-between" aria-label="Global">
+
+        <div x-data="{ expanded: false }">
+            <div x-show="expanded" @click="expanded = ! expanded" x-collapse.min.100px id="game" class="bg-white dark:bg-black m-0 p-0">
+
+                <div class="game-wrapper relative overflow-hidden bg-no-repeat bg-cover items-center">
+                    <h2 class="absolute left-1/2 -translate-x-1/2 items-center text-slate-600">press to play</h2>
+                    <img class="w-full" src="assets/img/Финалка+гуи.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <nav class="container mx-auto flex items-center justify-between" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span x-text="requestData.site_data[0].title" class="sr-only"></span>
@@ -76,16 +86,6 @@
                 </button>
             </div>
         </nav>
-        <div x-data="{ expanded: false }">
-            <div x-show="expanded" @click="expanded = ! expanded" x-collapse.min.100px id="game" class="bg-white dark:bg-black m-0 p-0">
-
-                <div class="game-wrapper relative overflow-hidden bg-no-repeat bg-cover items-center">
-                    <h2 class="absolute left-1/2 -translate-x-1/2 items-center text-slate-600">press to play</h2>
-                    <img class="w-full" src="assets/img/fin_1.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
         <main>
             <div class="relative px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -139,7 +139,7 @@
                             <p x-text="p.job_title" class="mb-4"></p>
                             <ul class="list-inside flex mx-auto justify-center">
                                 <template x-if="p.url_fb">
-                                    <a href="p.url_fb" class="px-2">
+                                    <a :href="p.url_fb" class="px-2">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 512 512">
                                             <path fill="currentColor"
@@ -148,7 +148,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_vk">
-                                    <a href="p.url_vk" class="px-2">
+                                    <a :href="p.url_vk" class="px-2">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -157,7 +157,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_gram">
-                                    <a href="p.url_gram" class="px-2">
+                                    <a :href="p.url_gram" class="px-2">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 496 512">
                                             <path fill="currentColor"
@@ -166,7 +166,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_in">
-                                    <a href="p.url_in" class="px-2">
+                                    <a :href="p.url_in" class="px-2">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -175,7 +175,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_tw">
-                                    <a href="p.url_tw" class="px-2">
+                                    <a :href="p.url_tw" class="px-2">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -194,22 +194,22 @@
 </section>
 <section id="features">
     <div class="relative bg-white dark:bg-black">
-        <div class="origin-center hover:origin-top lg:absolute lg:inset-0">
-            <div class=" lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="h-100 w-full object-cover lg:absolute lg:h-3/4"
+        <div class="origin-center hover:origin-top md:absolute md:inset-0">
+            <div class=" md:absolute md:inset-y-0 md:right-0 md:w-1/2">
+                <img class="h-100 w-full object-left object-cover  md:absolute md:h-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 hover:-rotate-3 duration-700"
                      src="assets/img/iddqd_identity.png"
                      alt="">
             </div>
         </div>
-        <div class="relative  container mx-auto  lg:grid lg:grid-cols-2 lg:px-8">
-            <div class="lg:pr-8">
-                <div class="mx-auto max-w-md sm:max-w-lg lg:mx-0">
+        <div class="relative container mx-auto  md:grid md:grid-cols-2 md:px-8">
+            <div class="md:pr-8">
+                <div class="mx-auto max-w-md sm:max-w-lg md:mx-0">
                     <h1>Направления нашей деятельности</h1>
                     <dl class="mt-10 max-w-xl space-y-8 leading-7  lg:max-w-none">
                         <template x-for="feature in requestData.features" :key="feature.id">
                             <dd class="flex relative pl-9">
                                 <div class="mr-4 flex-shrink-0 self-center">
-                                    <img class="h-16 w-16 " :src="feature.icon" :alt="feature.title" alt="">
+                                    <img class="h-16 w-16 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 hover:-rotate-3 duration-700" :src="feature.icon" :alt="feature.title" alt="">
                                 </div>
                                 <div>
                                     <h3 class="mb-0 pb-2" x-text="feature.title"></h3>
@@ -312,10 +312,10 @@
 -->
 <section id="footer">
     <footer class="bg-white dark:bg-black">
-        <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+        <div class="mx-auto container py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div class="flex justify-center space-x-6 md:order-2">
                 <template x-if="requestData.site_data[0].url_fb">
-                    <a href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -324,7 +324,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_vk">
-                    <a href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">VK</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -333,7 +333,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_gram">
-                    <a href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -342,7 +342,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_in">
-                    <a href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -351,7 +351,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_tw">
-                    <a href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -360,7 +360,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_git">
-                    <a href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -369,7 +369,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_mail">
-                    <a href="requestData.site_data[0].url_mail" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_mail" class="text-slate-400 hover:text-slate-500">
                         <span class="sr-only">Mail</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor"
