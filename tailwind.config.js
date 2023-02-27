@@ -30,4 +30,5 @@ module.exports = {
   important: true,
   darkMode: "class",
   plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/forms")],
 }
