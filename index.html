@@ -32,13 +32,23 @@
     <meta name="msapplication-TileColor" content="#00a300">
     <meta name="theme-color" content="#ffffff">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="preconnect" href="//api-maps.yandex.ru">
-    <link rel="dns-prefetch" href="//api-maps.yandex.ru">
+    <!--    <link rel="preconnect" href="//api-maps.yandex.ru">-->
+    <!--    <link rel="dns-prefetch" href="//api-maps.yandex.ru">-->
 
     <title x-text="requestData.site_data[0].title"></title>
 </head>
 <body class="bg-white dark:bg-black m-0 p-0">
+
 <section id="menu" class="m-0 p-0">
+    <div class="origin-center hover:origin-top">
+        <img class="w-full object-left object-cover h-screen"
+             src="assets/img/iddqd_identity.png"
+             alt="">
+    </div>
+    <!--        <div class="relative">-->
+    <!--            <h1 x-text="requestData.site_data[0].lorem"-->
+    <!--                class="line-clamp-1 max-h-screen text-clip overflow-hidden absolute origin-bottom-left -rotate-90"></h1>-->
+    <!--    </div>-->
     <div class="isolate">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
             <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -57,7 +67,8 @@
         </div>
 
         <div x-data="{ expanded: false }">
-            <div x-show="expanded" @click="expanded = ! expanded" x-collapse.min.100px id="game" class="bg-white dark:bg-black m-0 p-0">
+            <div x-show="expanded" @click="expanded = ! expanded" x-collapse.min.100px id="game"
+                 class="bg-white dark:bg-black m-0 p-0">
 
                 <div class="game-wrapper relative overflow-hidden bg-no-repeat bg-cover items-center">
                     <h2 class="absolute left-1/2 -translate-x-1/2 items-center text-slate-600">press to play</h2>
@@ -65,35 +76,35 @@
                 </div>
             </div>
         </div>
-        <nav class="container mx-auto flex items-center justify-between" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span x-text="requestData.site_data[0].title" class="sr-only"></span>
-                    <img class="h-8" :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title"
-                         alt="">
-                </a>
-            </div>
-            <div class="flex lg:gap-x-12">
-                <button :class="$store.darkMode  ? 'm-4 text-yellow-400 border-0 bg-black' : 'm-4 text-slate-800 border-0 bg-white'"
-                        x-data @click="$store.darkMode = !$store.darkMode">
-                    <svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+        <!--        <nav class="container mx-auto flex items-center justify-between" aria-label="Global">-->
+        <!--            <div class="flex lg:flex-1">-->
+        <!--                <a href="#" class="-m-1.5 p-1.5">-->
+        <!--                    <span x-text="requestData.site_data[0].title" class="sr-only"></span>-->
+        <!--                    <img class="h-8" :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title"-->
+        <!--                         alt="">-->
+        <!--                </a>-->
+        <!--            </div>-->
+        <!--            <div class="flex lg:gap-x-12">-->
+        <!--                <button :class="$store.darkMode  ? 'm-4 text-yellow-400 border-0 bg-black' : 'm-4 text-slate-800 border-0 bg-white'"-->
+        <!--                        x-data @click="$store.darkMode = !$store.darkMode">-->
+        <!--                    <svg-->
+        <!--                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
+        <!--                            stroke-width="2"-->
+        <!--                            stroke="currentColor" class="w-6 h-6">-->
+        <!--                        <path stroke-linecap="round" stroke-linejoin="round"-->
+        <!--                              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>-->
+        <!--                    </svg>-->
+        <!--                </button>-->
+        <!--            </div>-->
+        <!--        </nav>-->
         <main>
             <div class="relative px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                     <div class="text-center">
                         <h1 x-text="requestData.site_data[0].title" class="sr-only tracking-tight"></h1>
-                        <img class="h-24 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:-rotate-3 duration-700"
-                             :src="requestData.site_data[0].logo"
-                             :alt="requestData.site_data[0].title">
+                        <!--                        <img class="h-24 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:-rotate-3 duration-700"-->
+                        <!--                             :src="requestData.site_data[0].logo"-->
+                        <!--                             :alt="requestData.site_data[0].title">-->
                         <p x-text="requestData.site_data[0].description" class="mt-6 text-lg leading-8"></p>
                     </div>
                 </div>
@@ -117,29 +128,43 @@
 
     </div>
 </section>
+<section id="features">
+    <div class="container mx-auto py-32 sm:py-48 lg:py-56">
+        <h1 class="py-12">Направления нашей деятельности</h1>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-6 lg:gap-x-12">
+            <template x-for="feature in requestData.features" :key="feature.id">
+                <div class="bg-white dark:bg-black block rounded-lg shadow-lg">
+                    <div class="w-20 bg-no-repeat bg-cover">
+                        <img :src="feature.icon"
+                             class="w-full rounded-t-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:rotate-3 duration-1000"/>
+                    </div>
+                    <div class="my-4">
+                        <h4 x-text="feature.title" class="my-4"></h4>
+                        <p x-text="feature.more_info" class="my-0"></p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</section>
 <section id="people">
-    <div class="container mx-auto">
+    <div class="container mx-auto py-32 sm:py-48 lg:py-56">
         <h1>Наша команда</h1>
         <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 lg:gap-x-12">
             <template x-for="p in requestData.people" :key="p.id">
                 <div class="mb-6 lg:mb-0">
                     <div class="bg-white dark:bg-black block rounded-lg shadow-lg">
-                        <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                        <div class="overflow-hidden rounded-xl bg-no-repeat bg-cover">
                             <img :src="p.photo"
-                                 class="w-full rounded-t-lg transition ease-in-out delay-150 blur hover:blur-none hover:-translate-y-1 hover:scale-125 hover:rotate-3 duration-700"/>
-                            <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-                                 style="left: 0; bottom: 0">
-                                <path :fill="$store.darkMode  ? '#000' : '#FFF'"
-                                      d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,213.3C672,203,768,213,864,202.7C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                                </path>
-                            </svg>
+                                 class="w-full rounded-t-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:rotate-3 duration-1000"/>
+
                         </div>
                         <div class="p-6">
                             <h5 x-text="p.name" class="mb-4"></h5>
                             <p x-text="p.job_title" class="mb-4"></p>
                             <ul class="list-inside flex mx-auto justify-center">
                                 <template x-if="p.url_fb">
-                                    <a :href="p.url_fb" class="px-2">
+                                    <a :href="p.url_fb" class="px-2" target="_blank">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 512 512">
                                             <path fill="currentColor"
@@ -148,7 +173,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_vk">
-                                    <a :href="p.url_vk" class="px-2">
+                                    <a :href="p.url_vk" class="px-2" target="_blank">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -157,7 +182,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_gram">
-                                    <a :href="p.url_gram" class="px-2">
+                                    <a :href="p.url_gram" class="px-2" target="_blank">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 496 512">
                                             <path fill="currentColor"
@@ -166,7 +191,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_in">
-                                    <a :href="p.url_in" class="px-2">
+                                    <a :href="p.url_in" class="px-2" target="_blank">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -175,7 +200,7 @@
                                     </a>
                                 </template>
                                 <template x-if="p.url_tw">
-                                    <a :href="p.url_tw" class="px-2">
+                                    <a :href="p.url_tw" class="px-2" target="_blank">
                                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 448 512">
                                             <path fill="currentColor"
@@ -192,61 +217,31 @@
         </div>
     </div>
 </section>
-<section id="features">
-    <div class="relative bg-white dark:bg-black">
-        <div class="origin-center hover:origin-top md:absolute md:inset-0">
-            <div class=" md:absolute md:inset-y-0 md:right-0 md:w-1/2">
-                <img class="h-100 w-full object-left object-cover  md:absolute md:h-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 hover:-rotate-3 duration-700"
-                     src="assets/img/iddqd_identity.png"
-                     alt="">
-            </div>
-        </div>
-        <div class="relative container mx-auto  md:grid md:grid-cols-2 md:px-8">
-            <div class="md:pr-8">
-                <div class="mx-auto max-w-md sm:max-w-lg md:mx-0">
-                    <h1>Направления нашей деятельности</h1>
-                    <dl class="mt-10 max-w-xl space-y-8 leading-7  lg:max-w-none">
-                        <template x-for="feature in requestData.features" :key="feature.id">
-                            <dd class="flex relative pl-9">
-                                <div class="mr-4 flex-shrink-0 self-center">
-                                    <img class="h-16 w-16 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 hover:-rotate-3 duration-700" :src="feature.icon" :alt="feature.title" alt="">
-                                </div>
-                                <div>
-                                    <h3 class="mb-0 pb-2" x-text="feature.title"></h3>
-                                    <p x-text="feature.more_info"></p>
-                                </div>
-                            </dd>
-                        </template>
-                    </dl>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--
-<section id="about">
+<section id="contact">
     <div class="relative bg-white dark:bg-black">
         <div class="lg:absolute lg:inset-0">
             <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div id="map" class="h-40 backdrop-invert bg-white/30 w-full object-cover lg:absolute lg:h-full">
-                <script async src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&onload=getYaMap&apikey=cfc921e2-3d97-45cc-8c18-dc408b011416"></script>
+                <div id="map" class="h-20 backdrop-invert bg-white/30 w-full object-cover lg:absolute lg:h-full">
+                    <script async
+                            src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&onload=getYaMap&apikey=cfc921e2-3d97-45cc-8c18-dc408b011416"></script>
                     <script>
-                    ymaps.ready(getYaMap);
-                    function getYaMap(){
-                        var myMap = new ymaps.Map("map",{center: [59.924389,30.242215],zoom: 17});
-                        ymaps.geocode("Кожевенная линия, 40, Санкт-Петербург, 199106").then(function (res) {
-                            var coord = res.geoObjects.get(0).geometry.getCoordinates();
-                            var myPlacemark = new ymaps.Placemark(coord, {}, {
-                                // iconLayout: 'default#map',
-                                iconImageHref: "assets/img/favicon-32x32.png",
-                                iconImageSize: [32, 32],
-                                iconImageOffset: [20, 0]
+                        ymaps.ready(getYaMap);
+
+                        function getYaMap() {
+                            var myMap = new ymaps.Map("map", {center: [59.924389, 30.242215], zoom: 17});
+                            ymaps.geocode("Кожевенная линия, 40, Санкт-Петербург, 199106").then(function (res) {
+                                var coord = res.geoObjects.get(0).geometry.getCoordinates();
+                                var myPlacemark = new ymaps.Placemark(coord, {}, {
+                                    // iconLayout: 'default#map',
+                                    iconImageHref: "assets/img/favicon-32x32.png",
+                                    iconImageSize: [32, 32],
+                                    iconImageOffset: [20, 0]
+                                });
+                                myMap.geoObjects.add(myPlacemark);
+                                myMap.setCenter(coord);
                             });
-                            myMap.geoObjects.add(myPlacemark);
-                            myMap.setCenter(coord);
-                        });
-                    }
-                </script>
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -254,68 +249,21 @@
             <div class="lg:pr-8">
                 <div class="mx-auto max-w-md sm:max-w-lg lg:mx-0">
                     <h1>Обратная связь</h1>
-                    <p class="mt-4 text-lg text-gray-500 sm:mt-3">We’d love to hear from you! Send us a message using
-                        the form opposite, or email us. We’d love to hear from you! Send us a message using the form
-                        opposite, or email us.</p>
-                    <form action="#" method="POST" class="mt-9 grid grid-cols-1 gap-y-6 sm:gap-x-8">
-
-                        <div class="sm:col-span-2">
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <div class="mt-1">
-                                <input id="email" name="email" type="email" autocomplete="email"
-                                       class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                            </div>
-                        </div>
-                        <div class="sm:col-span-2">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <div class="mt-1">
-                                <input type="text" name="name" id="name" autocomplete="name"
-                                       class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                            </div>
-                        </div>
-                        <div class="sm:col-span-2">
-                            <div class="flex justify-between">
-                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                                <span id="phone-description" class="text-sm text-gray-500">Optional</span>
-                            </div>
-                            <div class="mt-1">
-                                <input type="text" name="phone" id="phone" autocomplete="tel"
-                                       aria-describedby="phone-description"
-                                       class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                            </div>
-                        </div>
-                        <div class="sm:col-span-2">
-                            <div class="flex justify-between">
-                                <label for="how-can-we-help" class="block text-sm font-medium text-gray-700">How can we
-                                    help you?</label>
-                                <span id="how-can-we-help-description"
-                                      class="text-sm text-gray-500">Max. 500 characters</span>
-                            </div>
-                            <div class="mt-1">
-                                <textarea id="how-can-we-help" name="how-can-we-help"
-                                          aria-describedby="how-can-we-help-description" rows="4"
-                                          class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
-                            </div>
-                        </div>
-                        <div class="text-right sm:col-span-2">
-                            <button type="submit"
-                                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
+                    <a :href="'mailto:' + requestData.site_data[0].url_mail" target="_blank">
+                        <h4 x-text="requestData.site_data[0].url_mail" class="mt-4 text-lg text-gray-500 sm:mt-3"></h4>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
--->
+
 <section id="footer">
     <footer class="bg-white dark:bg-black">
         <div class="mx-auto container py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div class="flex justify-center space-x-6 md:order-2">
                 <template x-if="requestData.site_data[0].url_fb">
-                    <a :href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -324,7 +272,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_vk">
-                    <a :href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">VK</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -333,7 +281,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_gram">
-                    <a :href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -342,7 +290,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_in">
-                    <a :href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -351,7 +299,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_tw">
-                    <a :href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -360,7 +308,7 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_git">
-                    <a :href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500">
+                    <a :href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -369,7 +317,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_mail">
-                    <a :href="requestData.site_data[0].url_mail" class="text-slate-400 hover:text-slate-500">
+                    <a :href="'mailto:' + requestData.site_data[0].url_mail"
+                       class="text-slate-400 hover:text-slate-500" target="_blank">
                         <span class="sr-only">Mail</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor"
