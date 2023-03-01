@@ -39,16 +39,95 @@
 </head>
 <body class="bg-white dark:bg-black m-0 p-0">
 
-<section id="menu" class="m-0 p-0">
-    <div class="origin-center hover:origin-top">
-        <img class="w-full object-left object-cover h-screen"
-             src="assets/img/iddqd_identity.png"
-             alt="">
-    </div>
-    <!--        <div class="relative">-->
-    <!--            <h1 x-text="requestData.site_data[0].lorem"-->
-    <!--                class="line-clamp-1 max-h-screen text-clip overflow-hidden absolute origin-bottom-left -rotate-90"></h1>-->
-    <!--    </div>-->
+
+<table class="h-screen max-w-full overflow-hidden p-12">
+    <tbody>
+    <tr class="w-16" >
+        <td class="h-16 w-full overflow-hidden object-left" colspan="4">
+            <div class="h-full bg-repeat-x top bg-[length:140vmin]  bg-[url('/assets/img/t1.svg')] " ></div>
+        </td>
+        <td class="h-full" rowspan="2">
+            <div class="w-16 h-full bg-repeat-y bg-top bg-[length:4vmin] bg-[url('/assets/img/t4.svg')]"></div>
+        </td>
+    </tr>
+    <tr class="h-full">
+        <td rowspan="2"><div class="w-16 h-full bg-repeat-y bg-left-bottom bg-[length:5vmin] bg-[url('/assets/img/t3.svg')]"></div></td>
+        <td class="h-full w-full pl-24" colspan="3">
+            <img class="ml-1/3 h-40 transition ease-in-out delay-150 -rotate-3 scale-110 duration-700 hover:-translate-y-1 hover:scale-125 hover:-rotate-6 "
+                 :src="requestData.site_data[0].logo"
+                 :alt="requestData.site_data[0].title">
+        </td>
+    </tr>
+    <tr class="w-16">
+        <td class="h-16 w-full overflow-hidden object-left" colspan="4">
+            <div class="h-16 bg-repeat-x bg-left-bottom bg-[length:140vmin] bg-[url('/assets/img/t2.svg')]"></div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!--<div class="h-screen">-->
+<!--    <div class="h-full relative">-->
+<!--        <div class="flex flex-col h-full uppercase ">-->
+<!--            <div class="flex-none ml-24">-->
+<!--                <div class="block overflow-hidden">-->
+<!--                    <img src="assets/img/t1.svg">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="grow"></div>-->
+<!--            <div class="flex-none m-4 overflow-hidden">-->
+<!--                <img src="assets/img/t2.svg">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute bottom-14 left-9 origin-left -rotate-90 ">-->
+<!--            <div class="block w-full h-full overflow-hidden">-->
+<!--                <h1 class="line-clamp-1 mt-10" x-html="requestData.site_data[0].tiser"></h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute  bottom-14 left-9  origin-left ">-->
+<!--            <div class="block w-full h-full overflow-hidden">-->
+<!--                <h1 class="line-clamp-1" x-html="requestData.site_data[0].tiser2"></h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute top-1/2 left-1/4 -translate-y-1/2">-->
+<!--            <img class="h-40 transition ease-in-out delay-150 -rotate-3 scale-110 duration-700 hover:-translate-y-1 hover:scale-125 hover:-rotate-6 "-->
+<!--                 :src="requestData.site_data[0].logo"-->
+<!--                 :alt="requestData.site_data[0].title">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="h-screen w-full">-->
+<!--    <div class="w-[99%] h-full relative">-->
+<!--        <div class="flex flex-col h-full uppercase ">-->
+<!--            <div class="flex-none ml-24">-->
+<!--                <div class="block overflow-hidden">-->
+<!--                <h1 x-html="requestData.site_data[0].tiser" class="line-clamp-1  max-h-screen"></h1>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="grow"></div>-->
+<!--            <div class="flex-none m-4 overflow-hidden">-->
+<!--                <h1 x-html="requestData.site_data[0].tiser2"-->
+<!--                    class="line-clamp-1   max-h-screen "></h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute bottom-14 left-9 origin-left -rotate-90 ">-->
+<!--            <div class="block w-full h-full overflow-hidden">-->
+<!--                <h1 class="line-clamp-1 mt-10" x-html="requestData.site_data[0].tiser"></h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute  bottom-14 left-9  origin-left ">-->
+<!--            <div class="block w-full h-full overflow-hidden">-->
+<!--                <h1 class="line-clamp-1" x-html="requestData.site_data[0].tiser2"></h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="absolute top-1/2 left-1/4 -translate-y-1/2">-->
+<!--            <img class="h-40 transition ease-in-out delay-150 -rotate-3 scale-110 duration-700 hover:-translate-y-1 hover:scale-125 hover:-rotate-6 "-->
+<!--                 :src="requestData.site_data[0].logo"-->
+<!--                 :alt="requestData.site_data[0].title">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
     <div class="isolate">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
             <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -69,42 +148,38 @@
         <div x-data="{ expanded: false }">
             <div x-show="expanded" @click="expanded = ! expanded" x-collapse.min.100px id="game"
                  class="bg-white dark:bg-black m-0 p-0">
-
                 <div class="game-wrapper relative overflow-hidden bg-no-repeat bg-cover items-center">
                     <h2 class="absolute left-1/2 -translate-x-1/2 items-center text-slate-600">press to play</h2>
-                    <img class="w-full" src="assets/img/Финалка+гуи.jpg" alt="">
+                    <img class="w-full" src="assets/img/fin_2.jpg" alt="">
                 </div>
             </div>
         </div>
-        <!--        <nav class="container mx-auto flex items-center justify-between" aria-label="Global">-->
-        <!--            <div class="flex lg:flex-1">-->
-        <!--                <a href="#" class="-m-1.5 p-1.5">-->
-        <!--                    <span x-text="requestData.site_data[0].title" class="sr-only"></span>-->
-        <!--                    <img class="h-8" :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title"-->
-        <!--                         alt="">-->
-        <!--                </a>-->
-        <!--            </div>-->
-        <!--            <div class="flex lg:gap-x-12">-->
-        <!--                <button :class="$store.darkMode  ? 'm-4 text-yellow-400 border-0 bg-black' : 'm-4 text-slate-800 border-0 bg-white'"-->
-        <!--                        x-data @click="$store.darkMode = !$store.darkMode">-->
-        <!--                    <svg-->
-        <!--                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
-        <!--                            stroke-width="2"-->
-        <!--                            stroke="currentColor" class="w-6 h-6">-->
-        <!--                        <path stroke-linecap="round" stroke-linejoin="round"-->
-        <!--                              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>-->
-        <!--                    </svg>-->
-        <!--                </button>-->
-        <!--            </div>-->
-        <!--        </nav>-->
+                <nav class="container mx-auto flex items-center justify-between" aria-label="Global">
+                    <div class="flex lg:flex-1">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span x-text="requestData.site_data[0].title" class="sr-only"></span>
+                            <img class="h-8" :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title"
+                                 alt="">
+                        </a>
+                    </div>
+                    <div class="flex lg:gap-x-12">
+                        <button :class="$store.darkMode  ? 'm-4 text-yellow-400 border-0 bg-black' : 'm-4 text-slate-800 border-0 bg-white'"
+                                x-data @click="$store.darkMode = !$store.darkMode">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
         <main>
             <div class="relative px-6 lg:px-8">
-                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div class="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56">
                     <div class="text-center">
                         <h1 x-text="requestData.site_data[0].title" class="sr-only tracking-tight"></h1>
-                        <!--                        <img class="h-24 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:-rotate-3 duration-700"-->
-                        <!--                             :src="requestData.site_data[0].logo"-->
-                        <!--                             :alt="requestData.site_data[0].title">-->
                         <p x-text="requestData.site_data[0].description" class="mt-6 text-lg leading-8"></p>
                     </div>
                 </div>
@@ -129,7 +204,7 @@
     </div>
 </section>
 <section id="features">
-    <div class="container mx-auto py-32 sm:py-48 lg:py-56">
+    <div class="container mx-auto pt-24 sm:pt-32 lg:pt-48">
         <h1 class="py-12">Направления нашей деятельности</h1>
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-6 lg:gap-x-12">
             <template x-for="feature in requestData.features" :key="feature.id">
@@ -148,7 +223,7 @@
     </div>
 </section>
 <section id="people">
-    <div class="container mx-auto py-32 sm:py-48 lg:py-56">
+    <div class="container mx-auto pb-24 sm:pb-32 lg:pb-48">
         <h1>Наша команда</h1>
         <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 lg:gap-x-12">
             <template x-for="p in requestData.people" :key="p.id">
@@ -252,18 +327,19 @@
                     <a :href="'mailto:' + requestData.site_data[0].url_mail" target="_blank">
                         <h4 x-text="requestData.site_data[0].url_mail" class="mt-4 text-lg text-gray-500 sm:mt-3"></h4>
                     </a>
+                        <h4 x-html="requestData.site_data[0].address" class="mt-4 text-lg text-gray-500 sm:mt-3"></h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <section id="footer">
     <footer class="bg-white dark:bg-black">
         <div class="mx-auto container py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div class="flex justify-center space-x-6 md:order-2">
                 <template x-if="requestData.site_data[0].url_fb">
-                    <a :href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_fb" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -272,7 +348,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_vk">
-                    <a :href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_vk" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">VK</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -281,7 +358,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_gram">
-                    <a :href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_gram" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -290,7 +368,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_in">
-                    <a :href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_in" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -299,7 +378,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_tw">
-                    <a :href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_tw" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -308,7 +388,8 @@
                     </a>
                 </template>
                 <template x-if="requestData.site_data[0].url_git">
-                    <a :href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500" target="_blank">
+                    <a :href="requestData.site_data[0].url_git" class="text-slate-400 hover:text-slate-500"
+                       target="_blank">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -327,6 +408,7 @@
                     </a>
                 </template>
             </div>
+            <h4 x-html="requestData.site_data[0].address" class="mt-4 text-lg text-gray-500 sm:mt-3"></h4>
             <div class="mt-8 md:order-1 md:mt-0">
                 <p x-text="'© 2023 ' + requestData.site_data[0].title + ', Inc. All rights reserved.'"
                    class="text-center text-base text-gray-400"></p>

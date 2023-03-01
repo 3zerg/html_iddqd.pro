@@ -1,7 +1,8 @@
 {
   "site_data": [
     {
-      "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "tiser": "ГЕЙМИФИКАЦИЯ. <span class='text-yellow-500'>ИГРЫ. </span><span class='text-green-500'>IDDQD. </span> <span class='text-fuchsia-500'>ТРЕНАЖЕРЫ. </span>",
+      "tiser2": "ИГРЫ. <span class='text-fuchsia-500'>ТРЕНАЖЕРЫ. </span> СОФТ. ПРИЛОЖЕНИЯ. <span class='text-fuchsia-500'>IDDQD</span>",
       "url": "https://iddqd.pro",
       "url_mail": "hello@iddqd.pro",
       "url_fb": "",
@@ -14,6 +15,7 @@
       "logo": "assets/img/LogoGreen.svg",
       "logo3d": "assets/img/iddqd3dLogo.png",
       "author": "&copy;iddqd 2023",
+      "address": "Кожевенная линия, 40,</br>Санкт-Петербург, 199106",
       "description": "Компания IDDQD создана командой единомышленников, ставящих своей целью вывести отечественный геймдев на принципиально новый уровень. Наш богатый опыт и профессиональные знания в сферах образования, информационных технологий, государственного устройства и банковского сектора позволяют внедрять игры туда, где их еще не было, не ограничиваясь миром развлечений."
     }
   ],
