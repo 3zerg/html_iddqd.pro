@@ -37,8 +37,8 @@
 
     <title x-text="requestData.site_data[0].title"></title>
 </head>
-<body class="bg-white dark:bg-black m-0 p-0 ">
-<div class="isolate">
+<body class="bg-white dark:bg-black m-0 p-0">
+<section id="main" class="isolate">
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
              viewBox="0 0 1155 678">
@@ -54,36 +54,41 @@
             </defs>
         </svg>
     </div>
-    <main>
-        <div class="relative px-6 lg:px-8">
-            <table class="h-screen max-w-full overflow-hidden p-12">
+    <div>
+        <div class="relative">
+            <table class="h-screen max-w-full overflow-hidden p-2 md:p-12">
                 <tbody>
-                <tr class="w-16">
-                    <td class="h-16 w-full overflow-hidden object-left" colspan="4">
-                        <div class="h-full bg-repeat-x top bg-[length:140vmin] lg:bg-[length:100vmin] " style="background-image: url('/assets/img/t1.svg')"></div>
+                <tr class="w-6 sm:w-16">
+                    <td class="h-6 sm:h-16 w-full overflow-hidden object-left" colspan="4">
+                        <div class="h-full bg-repeat-x top bg-[length:140vmin] lg:bg-[length:100vmin] "
+                             style="background-image: url('/assets/img/t1.svg')"></div>
                     </td>
                     <td class="h-full" rowspan="2">
-                        <div class="w-16 h-full bg-repeat-y bg-top bg-[length:4vmin] lg:bg-[length:3vmin]" style="background-image: url('/assets/img/t4.svg')"></div>
+                        <div class="w-6 sm:w-16 h-full bg-repeat-y bg-right-top bg-[length:4vmin] lg:bg-[length:3vmin]"
+                             style="background-image: url('/assets/img/t4.svg')"></div>
                     </td>
                 </tr>
                 <tr class="h-full">
                     <td rowspan="2">
-                        <div class="w-16 h-full bg-repeat-y bg-left-bottom bg-[length:5vmin] lg:bg-[length:4vmin]" style="background-image: url('/assets/img/t3.svg')"></div>
+                        <div class="w-6 sm:w-16 h-full bg-repeat-y bg-left-bottom bg-[length:5vmin] lg:bg-[length:4vmin]"
+                             style="background-image: url('/assets/img/t3.svg')"></div>
                     </td>
                     <td class="h-full w-full p-12" colspan="3">
 
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 my-auto">
                             <div class="mx-auto self-center">
-                            <img class=" h-16 md:h-24 lg:h-32 transition ease-in-out delay-150 -rotate-3 scale-110 duration-700 hover:-translate-y-1 hover:scale-125 hover:-rotate-6 "
-                                 :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title">
+                                <img class=" h-12 md:h-24 lg:h-32 transition ease-in-out delay-150 -rotate-3 scale-110 duration-700 hover:-translate-y-1 hover:scale-125 hover:-rotate-6 "
+                                     :src="requestData.site_data[0].logo" :alt="requestData.site_data[0].title">
                             </div>
-                            <h6 x-html="requestData.site_data[0].description" class="text-center lg:text-left leading-8"></h6>
+                            <span x-html="requestData.site_data[0].description"
+                                  class="sm:h6 text-center lg:text-left sm:leading-8 text-slate-400"></span>
                         </div>
                     </td>
                 </tr>
-                <tr class="w-16">
-                    <td class="h-16 w-full overflow-hidden object-left" colspan="4">
-                        <div class="h-16 bg-repeat-x bg-left-bottom bg-[length:140vmin] lg:bg-[length:100vmin]" style="background-image: url('/assets/img/t2.svg')"></div>
+                <tr class="w-6 sm:w-16">
+                    <td class="h-6 sm:h-16 w-full overflow-hidden object-left" colspan="4">
+                        <div class="h-6 sm:h-16 bg-repeat-x bg-left-bottom bg-[length:140vmin] lg:bg-[length:100vmin]"
+                             style="background-image: url('/assets/img/t2.svg')"></div>
                     </td>
                 </tr>
                 </tbody>
@@ -104,10 +109,9 @@
                 </svg>
             </div>
         </div>
-    </main>
-</div>
+    </div>
 </section>
-<section id="people">
+<section id="people" class="mx-6 md:py-12">
     <div class="container mx-auto ">
         <h1>Наша команда</h1>
         <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 lg:gap-x-12">

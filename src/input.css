@@ -10,7 +10,7 @@
 @layer base {
     html { font-family: GolosUIWebRegular, sans-serif; }
     body { @apply bg-white dark:bg-black m-0 p-0; }
-    section { @apply py-12 bg-white dark:bg-black ; }
+    section { @apply bg-white dark:bg-black ; }
 
     .font-bold {
         @apply font-['GolosUIWebBold'] dark:text-slate-100;
